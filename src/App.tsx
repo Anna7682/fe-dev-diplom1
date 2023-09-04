@@ -13,7 +13,7 @@ import { SelectionScreen } from './components/SelectionScreen';
 import { Loading } from './components/Loading';
 
 export const appURL = '/fe-dev-diplom';
-export const serverURL = 'https://fe-diplom.herokuapp.com';
+export const serverURL = 'https://fe-dev-diplom1.onrender.com';
 
 function App(): ReactElement {
   return (
