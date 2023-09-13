@@ -10,7 +10,7 @@ POST /routes/order
 ## Пример:
 
 ```js
-fetch( 'https://fe-diplom.herokuapp.com/order', {
+fetch( 'https://students.netoservices.ru/fe-diplom/order', {
     method: 'POST',
     body: JSON.stringify({
       "user": {
@@ -91,3 +91,4 @@ fetch( 'https://fe-diplom.herokuapp.com/order', {
 - **birthday** - День рождения (в формате YYYY-MM-DD)
 - **document_type** - Тип документа
 - **document_data** - Информация о документе
+
