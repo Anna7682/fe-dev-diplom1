@@ -93,6 +93,7 @@
     "ts-jest": "^27.0.4",
     "ts-loader": "^9.2.3",
     "ts-node": "^10.1.0",
+    "@babel/plugin-proposal-private-property-in-object": "7.21.11",
     "ts-node-dev": "^1.1.8"
   }
 }
