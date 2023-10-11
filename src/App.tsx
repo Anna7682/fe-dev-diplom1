@@ -30,7 +30,7 @@ function App(): ReactElement {
             <Route exact path="/items/:id.html" component={Error404} />
             <Route exact path="/loading" component={Loading} />
             <Route path="*" component={Error404} /> CartIcon
-            <Routes>
+            </Routes>
           </Router>
         </Main>
         <Footer />
