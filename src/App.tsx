@@ -1,5 +1,5 @@
 import React, { ReactElement } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './styles/common.scss';
 import Error404 from './components/Error404/Error404';
 import { Wrapper } from './components/Wrapper';
@@ -22,14 +22,16 @@ function App(): ReactElement {
       <Wrapper>
         <Header />
         <Main>
-          <Switch>
+          <Router>
+            <Routes>
             <Route exact path="/" component={LandingPage} />
             <Route exact path="/select" component={SelectionScreen} />
             <Route exact path="/success" component={Success} />
             <Route exact path="/items/:id.html" component={Error404} />
             <Route exact path="/loading" component={Loading} />
             <Route path="*" component={Error404} /> CartIcon
-          </Switch>
+            <Routes>
+          </Router>
         </Main>
         <Footer />
       </Wrapper>
