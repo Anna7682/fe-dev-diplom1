@@ -10,9 +10,13 @@ import { store } from './store';
 // Components
 import App from './App';
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-  );
+ReactDOM.createRoot(
+<React.StrictMode>
+    <BrowserRouter>
+      <Provider store={store}>
+        <App />
+      </Provider>
+    </BrowserRouter>
+  </React.StrictMode>,
+  document.getElementById('root')
+);
