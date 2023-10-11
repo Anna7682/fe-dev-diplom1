@@ -1,6 +1,6 @@
 import React, { memo, useEffect, useState } from 'react';
 import cn from 'clsx';
-import { useHistory, useLocation } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { DestinationPicker } from 'components/Pickers/DestinationPicker';
 import { DatePickerOrigin } from 'components/Pickers/DatePickerOrigin';
 import { Button } from 'antd';
@@ -27,7 +27,7 @@ export const Header = memo<Props>(({ className }) => {
   const [findDisabled, setFindDisabled] = useState<boolean>(true);
   const searchParams = useSelector((store: RootState) => store.searchParams);
   const location = useLocation();
-  const history = useHistory();
+  const navigate = useNavigate();
   const { pathname } = location;
   const splitLocation: string = pathname.replace(appURL, '').split('/')[1];
 
@@ -55,7 +55,7 @@ export const Header = memo<Props>(({ className }) => {
     dispatch(orderReset());
     dispatch(selectedSeatsReset());
     dispatch(getRouteFetchData(searchParams));
-    history.push('/select');
+    navigate('/select');
   };
 
   useEffect(() => {
